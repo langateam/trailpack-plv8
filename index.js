@@ -5,10 +5,12 @@ const Trailpack = require('trailpack')
 module.exports = class PLV8Trailpack extends Trailpack {
 
   /**
-   * TODO document method
+   * Validate plv8 store setting
    */
   validate () {
-
+    if (!this.app.config.plv8.store) {
+      return new Error('config.plv8.store must be set')
+    }
   }
 
   /**
