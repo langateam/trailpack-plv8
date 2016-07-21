@@ -1,0 +1,41 @@
+{
+  "name": "trailpack-plv8",
+  "version": "0.0.0",
+  "description": "require() and execute nodejs code in Postgres with PLV8 and Trails",
+  "homepage": "http://trailsjs.io",
+  "author": {
+    "name": "Langa",
+    "email": "hello@langa.io",
+    "url": "langa.io"
+  },
+  "main": "index.js",
+  "keywords": [
+    "trails trailpack postgres plv8 require graphql",
+    "trailpack",
+    "trails",
+    "trailjs"
+  ],
+  "dependencies": {
+    "trailpack": "latest"
+  },
+  "devDependencies": {
+    "lodash": "^4.11.1",
+    "trails": "latest",
+    "eslint": "^2.4",
+    "eslint-config-trails": "^1.0.4",
+    "mocha": "^2.4.5",
+    "smokesignals": "^1.0.9",
+    "trailpack-core": "^1.0.0-beta-6"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "git@github.com:langateam/trailpack-plv8.git",
+  "license": "MIT"
+}
