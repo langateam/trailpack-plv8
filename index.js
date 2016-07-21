@@ -1,6 +1,7 @@
 'use strict'
 
 const Trailpack = require('trailpack')
+const PLV8 = require('plv8')
 
 module.exports = class PLV8Trailpack extends Trailpack {
 
@@ -21,10 +22,10 @@ module.exports = class PLV8Trailpack extends Trailpack {
   }
 
   /**
-   * TODO document method
+   * Instantiate PLV8 with knex connection
    */
   initialize () {
-
+    this.plv8 = new PLV8(this.app.packs.knex.stores[this.app.config.plv8.store])
   }
 
   constructor (app) {
