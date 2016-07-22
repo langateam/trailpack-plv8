@@ -10,10 +10,14 @@
   },
   "main": "index.js",
   "keywords": [
-    "trails trailpack postgres plv8 require graphql",
+    "trails",
     "trailpack",
     "trails",
-    "trailjs"
+    "trailjs",
+    "postgres",
+    "plv8",
+    "require",
+    "graphql"
   ],
   "dependencies": {
     "plv8": "^1.0.1",
