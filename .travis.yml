@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- 6
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
+    on_start: never
+    on_failure: change
+deploy:
+  provider: npm
+  email: hello@langa.io
+  api_key:
+    secure: APGkb5oFOReshj41/sJ3TQXh/mNsIgDdjRB2IFxZCdesLrxeK8s3xjpQQg6CrtC8AUZ7+adrLc4moiVWDPIi2/rKmWDIWE2r+IpfqOr6ChfmL0Kc6vVsXR9amg6XYZBdxlm0xVJyecpUM2kVnhe04J4dqGXI/PAI9JW58otZVHHBJ4ueopP9uPE4Bqwr4m6111qbGeKhcXHHGfN2PybdFcj7U3NadrxqdKnSDLqX0jOH53fjBENb1yH3EvI/FQX5EQpD8F0emYFa9Ltz+pQIW9TckNUz7FUxskuEN4FvPg3OiVRbxq4y0aehWnuqtgbuFgHXm2XQmtgyC42MpXEEMdbDkad9A4aa4JeBJ4OFb0tcv0TUbVqfZW0k0OV67F3q1yUUsIPuU3vzNUo3NT0bFu9x5g8jfDxp6HtBLPslG4DsILEuvKWg/bFA4WPrkjHflCf+JhJur0xyvAuc8NaP+STC6w+UxSiMKzIJ1NU6JJYQbRnXDrEl3rxyS1BNjLLbibxhWnpaEecajm7M5nXpGAO5+gw/WIxrVeNjcfWnTN7/KBARBka1+brNSzxE0z6ktAW2iUVgo/8wkvQKM5AJ8lZm/5bXyZRoNKWb1/DW4qsN1nsEjpw/zcTEKDVO3l+T40pvkupvznSCxdgkaFXNfK6vetqmpY0iXbCXmPwXTrA=
+  on:
+    tags: true
+    repo: langateam/trailpack-plv8
+    node: 6
