@@ -5,7 +5,7 @@
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
 
-require() and execute nodejs code in Postgres with PLV8 and Trails
+require() and execute nodejs code in Postgres with PLV8 and Trails. Depends on [trailpack-knex](https://github.com/trailsjs/trailpack-knex).
 
 ## Install
 
@@ -22,6 +22,16 @@ module.exports = {
     // ... other trailpacks
     require('trailpack-plv8')
   ]
+}
+```
+
+```js
+// config/plv8.js
+module.exports = {
+  /**
+   * The name of the database store to use; must be defined in config.database.stores
+   */
+  store: 'some-plv8-store'
 }
 ```
 
