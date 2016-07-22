@@ -14,9 +14,6 @@ module.exports = class PLV8Trailpack extends Trailpack {
     }
   }
 
-  /**
-   * TODO document method
-   */
   configure () {
 
   }

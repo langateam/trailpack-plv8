@@ -17,8 +17,19 @@ module.exports = _.defaultsDeep({
       packs: [
         smokesignals.Trailpack,
         require('trailpack-core'),
+        require('trailpack-knex'),
         require('../')
       ]
+    },
+    database: {
+      models: {
+        migrate: 'none'
+      },
+      stores: {
+        plv8: {
+
+        }
+      }
     }
   }
 }, smokesignals.FailsafeConfig)
