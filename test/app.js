@@ -32,8 +32,7 @@ module.exports = _.defaultsDeep({
         plv8: {
           client: 'pg',
           connection: {
-            host: 'localhost',
-            database: 'plv8_test'
+            host: 'localhost'
           }
         }
       }
