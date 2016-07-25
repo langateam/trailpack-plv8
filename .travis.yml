@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - 6
+
 notifications:
   email: false
   webhooks:
@@ -8,6 +9,7 @@ notifications:
     - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
     on_start: never
     on_failure: change
+
 deploy:
   provider: npm
   email: hello@langa.io
