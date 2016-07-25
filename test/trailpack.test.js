@@ -21,5 +21,11 @@ describe('Trailpack', () => {
     it('should instantiate PLV8', () => {
       assert(pack.plv8 instanceof PLV8)
     })
+    it('should install config.plv8.dependencies', () => {
+      return pack.plv8.eval(() => {
+        const _ = require('lodash')
+        assert.equal(_.identity('hello'), 'hello')
+      })
+    })
   })
 })

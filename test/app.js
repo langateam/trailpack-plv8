@@ -13,6 +13,9 @@ module.exports = _.defaultsDeep({
     services: { }
   },
   config: {
+    log: {
+      logger: new smokesignals.Logger('debug')
+    },
     main: {
       packs: [
         smokesignals.Trailpack,
@@ -27,9 +30,19 @@ module.exports = _.defaultsDeep({
       },
       stores: {
         plv8: {
-
+          client: 'pg',
+          connection: {
+            host: 'localhost',
+            database: 'plv8_test'
+          }
         }
       }
+    },
+    plv8: {
+      store: 'plv8',
+      dependencies: [
+        require.resolve('lodash')
+      ]
     }
   }
 }, smokesignals.FailsafeConfig)

@@ -22,7 +22,19 @@ module.exports = class PLV8Trailpack extends Trailpack {
    * Instantiate PLV8 with knex connection
    */
   initialize () {
-    this.plv8 = new PLV8(this.app.packs.knex.stores[this.app.config.plv8.store])
+    const plconfig = this.app.config.plv8
+
+    this.log.debug('plv8: using store', plconfig.store)
+    this.log.debug('plv8: using knex', this.app.packs.knex.stores[plconfig.store])
+
+    this.plv8 = new PLV8(this.app.packs.knex.stores[plconfig.store].knex)
+
+    return this.plv8.init()
+      .then(() => {
+        return Promise.all(plconfig.dependencies.map(mod => {
+          return this.plv8.install(mod, this.app.config)
+        }))
+      })
   }
 
   constructor (app) {
