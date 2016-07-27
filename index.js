@@ -25,7 +25,6 @@ module.exports = class PLV8Trailpack extends Trailpack {
     const plconfig = this.app.config.plv8
 
     this.log.debug('plv8: using store', plconfig.store)
-    this.log.debug('plv8: using knex', this.app.packs.knex.stores[plconfig.store])
 
     this.plv8 = new PLV8(this.app.packs.knex.stores[plconfig.store].knex)
 
@@ -34,6 +33,9 @@ module.exports = class PLV8Trailpack extends Trailpack {
         return Promise.all(plconfig.dependencies.map(mod => {
           return this.plv8.install(mod, this.app.config)
         }))
+      })
+      .catch(err => {
+        this.log.warn('trailpack-plv8:', err)
       })
   }
 
