@@ -31,7 +31,7 @@ module.exports = class PLV8Trailpack extends Trailpack {
     return this.plv8.init()
       .then(() => {
         return Promise.all(plconfig.dependencies.map(mod => {
-          return this.plv8.install(mod, this.app.config)
+          return this.plv8.install(mod, this.app.config.main.paths.root)
         }))
       })
       .catch(err => {
