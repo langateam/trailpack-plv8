@@ -25,7 +25,7 @@ module.exports = _.defaultsDeep({
         require('../')
       ],
       paths: {
-        root: path.resolve(__dirname, '..')
+        //root: path.resolve(__dirname, '..')
       }
     },
     database: {
