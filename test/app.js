@@ -36,7 +36,9 @@ module.exports = _.defaultsDeep({
             database: 'postgres'
           }
         }
-      }
+      },
+      defaultStore: 'plv8',
+      migrate: 'none'
     },
     plv8: {
       store: 'plv8',
