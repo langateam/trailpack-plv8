@@ -5,4 +5,5 @@
 --slow 50
 --check-leaks
 --globals app
+--timeout 20000
 --fgrep app.js --invert
