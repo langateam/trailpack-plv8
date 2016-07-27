@@ -15,7 +15,7 @@ module.exports = class PLV8Trailpack extends Trailpack {
   }
 
   configure () {
-
+    this.log.debug('app.config.main.paths', this.app.config.paths)
   }
 
   /**

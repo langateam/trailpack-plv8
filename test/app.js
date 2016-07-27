@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
 
@@ -14,7 +15,7 @@ module.exports = _.defaultsDeep({
   },
   config: {
     log: {
-      logger: new smokesignals.Logger('debug')
+      logger: new smokesignals.Logger('silly')
     },
     main: {
       packs: [
@@ -22,7 +23,10 @@ module.exports = _.defaultsDeep({
         require('trailpack-core'),
         require('trailpack-knex'),
         require('../')
-      ]
+      ],
+      paths: {
+        root: path.resolve(__dirname, '..')
+      }
     },
     database: {
       models: {
