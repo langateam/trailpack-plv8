@@ -1,6 +1,5 @@
 'use strict'
 
-const path = require('path')
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
 
@@ -23,10 +22,7 @@ module.exports = _.defaultsDeep({
         require('trailpack-core'),
         require('trailpack-knex'),
         require('../')
-      ],
-      paths: {
-        //root: path.resolve(__dirname, '..')
-      }
+      ]
     },
     database: {
       models: {
@@ -36,8 +32,10 @@ module.exports = _.defaultsDeep({
         plv8: {
           client: 'pg',
           connection: {
-            host: 'localhost',
-            database: 'postgres'
+            host: process.env.PG_HOST || 'localhost',
+            database: process.env.PG_DB || 'postgres',
+            user: process.env.PG_USER || 'postgres',
+            password: process.env.PG_PASSWORD
           }
         }
       },

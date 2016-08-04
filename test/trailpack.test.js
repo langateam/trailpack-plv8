@@ -24,7 +24,10 @@ describe('Trailpack', () => {
     it('should install config.plv8.dependencies', () => {
       return pack.plv8.eval(() => {
         const _ = require('lodash')
-        assert.equal(_.identity('hello'), 'hello')
+        return _.map([ 1, 2, 3 ], e => e + 1)
+      })
+      .then(result => {
+        assert.equal(result[0], 2)
       })
     })
   })
