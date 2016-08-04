@@ -1,6 +1,6 @@
 {
   "name": "trailpack-plv8",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "require() and execute nodejs code in Postgres with PLV8 and Trails",
   "homepage": "http://trailsjs.io",
   "author": {
