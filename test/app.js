@@ -45,7 +45,7 @@ module.exports = _.defaultsDeep({
     plv8: {
       store: 'plv8',
       dependencies: [
-        'lodash'
+        require.resolve('lodash')
       ]
     }
   }
