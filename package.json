@@ -20,7 +20,7 @@
     "graphql"
   ],
   "dependencies": {
-    "plv8": "^1.0.6",
+    "plv8": "^2.0.2",
     "trailpack": "latest"
   },
   "devDependencies": {
