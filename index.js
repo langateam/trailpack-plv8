@@ -35,7 +35,8 @@ module.exports = class PLV8Trailpack extends Trailpack {
         }))
       })
       .catch(err => {
-        this.log.warn('trailpack-plv8:', err)
+        this.log.error('trailpack-plv8:', err)
+        throw err
       })
   }
 
